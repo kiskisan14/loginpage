@@ -1,0 +1,946 @@
+
+
+.projects-page {
+    width: 90%;
+    max-width: 1150px;
+
+    margin: auto;
+
+    padding-bottom: 80px;
+}
+
+
+
+.projects-hero {
+    position: relative;
+
+    padding: 90px 0 70px;
+}
+
+
+.hero-label {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: white;
+
+    font-family: 'JetBrains Mono', monospace;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 20px;
+}
+
+
+.hero-label span {
+    width: 8px;
+
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    box-shadow: 0 0 12px white;
+}
+
+
+.projects-hero h1 {
+    max-width: 800px;
+
+    color: white;
+
+    font-family: 'Space Grotesk', sans-serif;
+
+    font-size: 65px;
+
+    line-height: 1.05;
+
+    letter-spacing: -2px;
+
+    margin-bottom: 25px;
+}
+
+
+.projects-hero h1 span {
+    color: #fff0e5;
+
+    text-shadow: 3px 3px 0 #ff7f50;
+}
+
+
+.projects-hero > p {
+    max-width: 650px;
+
+    color: white;
+
+    line-height: 1.8;
+
+    font-size: 16px;
+}
+
+
+.project-counter {
+    position: absolute;
+
+    right: 20px;
+
+    bottom: 60px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    color: white;
+}
+
+
+.project-counter strong {
+    font-family: 'Space Grotesk', sans-serif;
+
+    font-size: 55px;
+
+    line-height: 1;
+}
+
+
+.project-counter span {
+    font-family: 'JetBrains Mono', monospace;
+
+    font-size: 10px;
+
+    line-height: 1.5;
+
+    letter-spacing: 1px;
+}
+
+
+
+.projects-section,
+.skills-section,
+.hobbies-section {
+    padding: 70px 0;
+}
+
+
+.section-heading {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-end;
+
+    margin-bottom: 35px;
+}
+
+
+.section-label {
+    color: white;
+
+    font-family: 'JetBrains Mono', monospace;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 8px;
+}
+
+
+.section-heading h2 {
+    color: white;
+
+    font-family: 'Space Grotesk', sans-serif;
+
+    font-size: 36px;
+}
+
+
+.section-note {
+    color: rgba(255, 255, 255, 0.8);
+
+    font-size: 13px;
+}
+
+
+.section-note strong {
+    color: white;
+}
+
+
+.project-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+.project-link {
+    text-decoration: none;
+
+    color: inherit;
+}
+
+
+.project-card {
+    position: relative;
+
+    overflow: hidden;
+
+    background: white;
+
+    border-radius: 18px;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.project-card:hover {
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 25px 45px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.project-number {
+    position: absolute;
+
+    top: 15px;
+
+    left: 15px;
+
+    z-index: 5;
+
+    width: 38px;
+
+    height: 38px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: #ff7f50;
+
+    color: white;
+
+    border-radius: 50%;
+
+    font-family: 'JetBrains Mono', monospace;
+
+    font-size: 11px;
+
+    font-weight: bold;
+}
+
+
+
+.project-image-wrapper {
+    height: 230px;
+
+    overflow: hidden;
+
+    position: relative;
+}
+
+
+.project-image {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.5s ease;
+}
+
+
+.project-card:hover .project-image {
+    transform: scale(1.08);
+}
+
+
+.image-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: rgba(255, 127, 80, 0.85);
+
+    color: white;
+
+    font-family: 'JetBrains Mono', monospace;
+
+    font-size: 13px;
+
+    opacity: 0;
+
+    transition: opacity 0.3s ease;
+}
+
+
+.project-card:hover .image-overlay {
+    opacity: 1;
+}
+
+
+.project-content {
+    padding: 25px;
+}
+
+
+.project-type {
+    color: #ff7f50;
+
+    font-family: 'JetBrains Mono', monospace;
+
+    font-size: 9px;
+
+    font-weight: bold;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 8px;
+}
+
+
+.project-content h3 {
+    color: #222;
+
+    font-family: 'Space Grotesk', sans-serif;
+
+    font-size: 24px;
+
+    margin-bottom: 12px;
+}
+
+
+.project-description {
+    color: #777;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    min-height: 65px;
+
+    margin-bottom: 20px;
+}
+
+
+
+.project-content .tags {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 6px;
+}
+
+
+.project-content .tags span {
+    padding: 6px 9px;
+
+    background: #fff1e9;
+
+    color: #ff7f50;
+
+    border-radius: 5px;
+
+    font-family: 'JetBrains Mono', monospace;
+
+    font-size: 9px;
+}
+
+
+
+.project-footer {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-top: 22px;
+
+    padding-top: 15px;
+
+    border-top: 1px solid #eee;
+
+    color: #333;
+
+    font-family: 'JetBrains Mono', monospace;
+
+    font-size: 11px;
+}
+
+
+.project-footer span:last-child {
+    color: #ff7f50;
+
+    font-size: 18px;
+}
+
+
+/* =================================
+   SKILLS
+================================= */
+
+.skills-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+.skill-card {
+    padding: 30px;
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    border-radius: 15px;
+
+    background: rgba(255, 255, 255, 0.15);
+
+    backdrop-filter: blur(10px);
+
+    transition: 0.3s;
+}
+
+
+.skill-card:hover {
+    background: white;
+
+    transform: translateY(-7px);
+}
+
+
+.skill-top {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 30px;
+}
+
+
+.skill-icon {
+    width: 50px;
+
+    height: 50px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: #ff7f50;
+
+    color: white;
+
+    border-radius: 12px;
+
+    font-family: 'JetBrains Mono', monospace;
+
+    font-weight: bold;
+}
+
+
+.skill-number {
+    color: rgba(255, 255, 255, 0.7);
+
+    font-family: 'JetBrains Mono', monospace;
+
+    font-size: 11px;
+}
+
+
+.skill-card:hover .skill-number {
+    color: #aaa;
+}
+
+
+.skill-card h3 {
+    color: white;
+
+    font-family: 'Space Grotesk', sans-serif;
+
+    font-size: 22px;
+
+    margin-bottom: 12px;
+}
+
+
+.skill-card:hover h3 {
+    color: #222;
+}
+
+
+.skill-card p {
+    color: rgba(255, 255, 255, 0.8);
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    margin-bottom: 20px;
+}
+
+
+.skill-card:hover p {
+    color: #777;
+}
+
+
+.hobbies-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+.hobby-card {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 18px;
+
+    padding: 25px;
+
+    background: white;
+
+    border-radius: 15px;
+
+    transition: 0.3s;
+}
+
+
+.hobby-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+
+.hobby-icon {
+    min-width: 55px;
+
+    height: 55px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: #fff1e9;
+
+    border-radius: 12px;
+
+    font-size: 25px;
+}
+
+
+.hobby-card h3 {
+    color: #222;
+
+    font-family: 'Space Grotesk', sans-serif;
+
+    font-size: 20px;
+
+    margin-bottom: 7px;
+}
+
+
+.hobby-card p {
+    color: #777;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+}
+
+
+
+.learning-section {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 50px;
+
+    margin-top: 50px;
+
+    padding: 45px;
+
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.2);
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    backdrop-filter: blur(10px);
+}
+
+
+.learning-content {
+    max-width: 650px;
+}
+
+
+.learning-content h2 {
+    color: white;
+
+    font-family: 'Space Grotesk', sans-serif;
+
+    font-size: 40px;
+
+    margin-bottom: 12px;
+}
+
+
+.learning-content > p:not(.section-label) {
+    color: rgba(255, 255, 255, 0.85);
+
+    font-size: 13px;
+
+    line-height: 1.8;
+
+    margin-bottom: 20px;
+}
+
+
+.learning-tags {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+}
+
+
+.learning-tags span {
+    padding: 8px 12px;
+
+    background: white;
+
+    color: #ff7f50;
+
+    border-radius: 6px;
+
+    font-family: 'JetBrains Mono', monospace;
+
+    font-size: 9px;
+}
+
+
+.learning-symbol {
+    display: flex;
+
+    align-items: center;
+
+    color: white;
+
+    font-family: 'JetBrains Mono', monospace;
+
+    font-size: 50px;
+
+    opacity: 0.8;
+}
+
+
+.learning-symbol strong {
+    color: #ff7f50;
+
+    font-size: 25px;
+}
+
+
+
+@media (max-width: 950px) {
+
+    .project-grid,
+    .skills-grid,
+    .hobbies-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    .project-counter {
+        position: static;
+
+        margin-top: 30px;
+    }
+
+
+    .learning-symbol {
+        display: none;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .projects-hero {
+        padding-top: 50px;
+    }
+
+
+    .projects-hero h1 {
+        font-size: 42px;
+    }
+
+
+    .section-heading {
+        display: block;
+    }
+
+
+    .section-note {
+        margin-top: 10px;
+    }
+
+
+    .project-grid,
+    .skills-grid,
+    .hobbies-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .learning-section {
+        padding: 30px;
+
+        margin-top: 20px;
+    }
+
+
+    .learning-content h2 {
+        font-size: 32px;
+    }
+
+}
+
+
+.hobbies-featured-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+.hobby-featured {
+    overflow: hidden;
+
+    background: white;
+
+    border-radius: 18px;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.hobby-featured:hover {
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 25px 45px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.hobby-image-wrapper {
+    height: 250px;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+.hobby-image {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.5s ease;
+}
+
+
+.hobby-featured:hover .hobby-image {
+    transform: scale(1.08);
+}
+
+
+
+.hobby-number {
+    position: absolute;
+
+    top: 15px;
+
+    left: 15px;
+
+    width: 40px;
+
+    height: 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #ff7f50;
+
+    color: white;
+
+    font-family: 'JetBrains Mono', monospace;
+
+    font-size: 11px;
+
+    font-weight: bold;
+}
+
+
+
+.hobby-category {
+    position: absolute;
+
+    right: 15px;
+
+    bottom: 15px;
+
+    padding: 7px 10px;
+
+    background: rgba(255, 255, 255, 0.9);
+
+    color: #ff7f50;
+
+    border-radius: 5px;
+
+    font-family: 'JetBrains Mono', monospace;
+
+    font-size: 9px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+
+
+.hobby-content {
+    padding: 25px;
+}
+
+
+.hobby-content h3 {
+    color: #222;
+
+    font-family: 'Space Grotesk', sans-serif;
+
+    font-size: 25px;
+
+    margin-bottom: 10px;
+}
+
+
+.hobby-content p {
+    color: #777;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+
+    margin-bottom: 18px;
+}
+
+
+
+.hobby-tags {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 7px;
+}
+
+
+.hobby-tags span {
+    padding: 6px 9px;
+
+    background: #fff1e9;
+
+    color: #ff7f50;
+
+    border-radius: 5px;
+
+    font-family: 'JetBrains Mono', monospace;
+
+    font-size: 9px;
+}
+
+
+@media (max-width: 950px) {
+
+    .hobbies-featured-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .hobbies-featured-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .hobby-image-wrapper {
+        height: 230px;
+    }
+
+}
